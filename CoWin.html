@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <title>CoWin</title>
+    <style>
+        /*----------Conatiner Css--------------------*/
+        .container {
+            display: grid;
+
+            grid-template-areas:
+
+                'header header header'
+                'navbar navbar  navbar'
+                'section section  section'
+                'medium medium medium'
+                'footer footer footer ';
+        }
+
+        /*----------- BDR CLASS  CSS-------------*/
+        .bdr {
+            border: 1px solid rgb(204, 201, 201);
+            padding: 5px;
+        }
+
+        /*------------------HEADER CSS--------------*/
+        header {
+            grid-area: header;
+            border: none;
+            background-color: rgb(16, 16, 148);
+            color: white;
+
+            padding: 0px;
+
+        }
+
+        header img {
+            float: left;
+            border-radius: 3px;
+
+        }
+       
+
+        .dropbtn {
+            background-color: rgb(8, 8, 141);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: black;
+            color: white;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: blue;
+        }
+
+        div .dropdown {
+            float: right;
+            justify-content: center;
+            align-items: center;
+            margin: -87px 14px;
+        }
+
+        /*----------------------NAV CSS--------------*/
+        nav {
+            top: 0;
+            grid-area: navbar;
+            border: none;
+            display: flex;
+            flex-direction: column;
+
+
+
+        }
+
+
+        nav ul {
+            padding: 0px 14px;
+        }
+
+        section {
+            grid-area: section;
+            text-align: center;
+            display: block;
+            background-color: aqua;
+
+
+        }
+
+        ul li {
+
+            list-style-type: none;
+            float: left;
+            padding-right: 86px;
+            font-size: 20px;
+            font-family: 'Fjalla One', sans-serif;
+        }
+
+
+
+        nav ul li button a {
+            font-family: 'Besley', serif;
+            font-weight: bold;
+            color: black;
+        }
+
+
+        li a,
+        img,
+        button {
+            display: block;
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            margin: 3px 6px;
+
+
+        }
+
+        ul li button {
+            border-radius: 29px;
+            background-color: #ffc107;
+            padding: 24px 42px;
+            border: none;
+            box-shadow: 2px 3px grey;
+            color: black;
+            font-family: 'IBM Plex Sans Devanagari', sans-serif;
+
+        }
+
+        li button:hover {
+            cursor: pointer;
+            box-shadow: none;
+        }
+
+        /*--------------------SECTION CSSS-------------*/
+
+        section img {
+            margin: 0;
+            padding: 0;
+            border: 4px solid rgb(10, 10, 10);
+            width: 100%;
+            height: 100%;
+        }
+       
+
+        /*-------------------MEDIUM CSS-------------------*/
+        medium {
+            grid-area: medium;
+            background-color: rgb(159 226 166);  
+        }
+       
+
+        medium form {
+            font-size: 20px;
+            justify-content: center;
+            padding-left: 600px;
+            align-items: center;
+
+
+        }
+
+
+        medium form input {
+            font-size: 15px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color:rgb(231, 154, 126);
+        
+        }
+
+        medium form label {
+            color: blue;
+            font-weight: bold;
+        }
+
+        medium button {
+            background-color: green;
+            border-radius: 22px;
+            border: 3px solid red;
+            cursor: pointer;
+            margin: 29px -31px;
+            padding: 18px 44px;
+            font-size: 20px;
+            box-shadow: 2px 3px;
+            color: black;
+            font-family: 'IBM Plex Sans Devanagari', sans-serif;
+        }
+
+        medium input[type=reset] {
+            background-color: green;
+            border-radius: 22px;
+            border: 3px solid red;
+            cursor: pointer;
+            margin: 30px 157px;
+            padding: 18px 52px;
+            font-size: 20px;
+            box-shadow: 2px 3px;
+            margin-top: -94px;
+            font-weight: bold;
+            font-family: 'IBM Plex Sans Devanagari', sans-serif;
+        }
+
+        input[type=reset]:hover {
+            box-shadow: none;
+        }
+
+        medium button:hover {
+            box-shadow: none;
+        }
+
+        .a a:hover {
+            border-radius: 4px;
+            border: 2px soli black;
+            background-color: rgb(211, 204, 204);
+            color: rgb(253, 0, 0);
+
+        }
+
+        #ab a:hover {
+            border-radius: 4px;
+            background-color: rgb(211, 204, 204);
+            color: rgb(253, 0, 0);
+        }
+
+        .a {
+            padding-top: 23px;
+        }
+
+        #ab {
+            padding-left: 156px;
+            padding-top: 23px;
+            color: rgb(10, 10, 185);
+            font-weight: bold;
+        }
+       
+
+        /*--------------------FOOTER CSS-------------------*/
+        footer {
+            grid-area: footer;
+            text-align: center;
+            background-color: blue;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        footer:hover{
+            background-image: url("https://yt3.ggpht.com/yti/APfAmoEiD2BM-oV_HYh87S0KhlArLf6phahpC1xmdDFl=s88-c-k-c0x00ffffff-no-rj-mo" );
+            background-repeat: no-repeat;
+            border: 2px solid black;
+            background-position: 300px;
+           
+        }
+        /*----------------------Responsive Part---------------------*/
+        @media (min-width:300px) and (max-width:450px) {
+            div .dropdown {
+                margin: -74px 403px;
+                margin-right: 23px;
+                margin-top: -94px;
+                float: right;
+                justify-content: center;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            header img {
+                width: 90px;
+                height: 90px;
+            }
+
+            top {
+                width: auto;
+                text-align: center;
+
+            }
+
+            nav ul li button {
+                margin-left: 171px;
+            }
+
+
+            nav ul li {
+                display: block;
+                width: 100%;
+                text-align: center;
+                border: 1px solid gainsboro;
+                margin: 0;
+                padding: 0;
+            }
+
+            #ab {
+                padding-left: 1px;
+            }
+
+            .bdr {
+                width: 95%;
+            }
+
+            section img {
+                width: 100%;
+                height: 100%;
+            }
+
+            medium form {
+                padding-left: 85px;
+            }
+
+            mediun input[type=reset] {
+                margin-left: 10px;
+            }
+           
+        }
+
+        /*---------------------------------------Responsice part-------------------------------*/
+        @media (min-width:450) and (max-width:800px) {
+
+            .bdr {
+                width: 85%;
+            }
+
+            nav ul li button {
+                margin-left: 171px;
+            }
+
+
+            div .dropdown {
+                margin: -74px 403px;
+                margin-right: 23px;
+                margin-top: -94px;
+                float: right;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!----------------------------Header Part------------------------------------------------------------------>
+        <header class="bdr">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.HkSep68uo2zb3q3JvQZwiAHaFj&pid=Api&P=0&w=226&h=170"
+                width="120px" height="100px">
+            <pre style="font-size: 20px;padding:0px 143px;font-family: 'Roboto', sans-serif;">Ministry Of Health And
+Family Welfare
+            </pre>
+            <!--Drop Down Part-->
+            <div class="dropdown">
+                <button class="dropbtn">English &dArr;</button>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">Hindi</a>
+                    <a href="#">Gujarati</a>
+                    <a href="#">Rajasthani</a>
+                    <a href="#">Punjabi</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">Bengali</a>
+                    <a href="#">Assamese</a>
+                    <a href="#">Tamil</a>
+                </div>
+            </div>
+        </header>
+        <!------------------------------------------------Navigation Part------------------------------------------------>
+        <nav class="bdr ">
+            <ul>
+                <li> <img src="https://tse4.mm.bing.net/th?id=OIP.eqicHswnQ0EEeipoLdxl0AHaCZ&pid=Api&P=0&w=472&h=154"
+                        height="70x" width="90px" title="CoWin"></li>
+
+                <li id="ab"><a href="https://selfregistration.cowin.gov.in/" target="_blank" title="Book Slot">Book
+                        Appointment</a> </li>
+                <li class="a"><a href="https://selfregistration.cowin.gov.in/" target="_blank"
+                        title="Get Your Certificate">Download
+                        Certificate</a>
+                </li>
+                <li class="a"><a
+                        href="https://prod-cdn.preprod.co-vin.in/assets/pdf/User_Guide_Citizen%20registration_18%2B.pdf"
+                        target="_blank">Resources</a>
+                </li>
+
+                <li><button title="REGISTER/SIGN IN"><a href="https://selfregistration.cowin.gov.in/"
+                            target="_blank"><b>REGISTER/SIGN IN</b></a></button></li>
+            </ul>
+        </nav>
+        <!-------------------------------Section Part------------------------------------------------------------->
+
+        <section class="bdr">
+            <img id="imageOne"
+                src="https://images.cnbctv18.com/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-08-at-8.27.39-AM-2.jpeg">
+            <br>
+        </section>
+
+        <!------------------------------------Medium Part-------------------------------------------------------------->
+        <medium class=" bdr">
+            <h1 style="text-align: center; font-size: 55px; font-family: 'Besley', serif;">Contact Us</h1>
+            <div class="form">
+            <form>
+
+                <label>Name:</label>
+                <input type="text" placeholder="Enter Your Name" maxlength="20" ><br><br>
+
+                <label>Email Id:</label>
+                <input type="email" placeholder="Enter Your Email"><br><br>
+
+                <label>Phone Number:</label>
+                <input type="number" placeholder="Enter Your Phone Number"><br><br>
+
+
+                <button onclick="myFunction()" title="Submit">Submit</button>
+
+                <input type="reset" title="Reset">
+
+            </form><br>
+            </div>
+        </medium>
+        <!--------------------------------Footer Part-------------------------------------------------------->
+        <footer class="bdr">
+            Copyright © 2021 CoWIN. All Rights Reserved..... &nbsp &nbsp &nbsp &nbsp &nbspTerms of Service &nbsp
+            &nbsp
+            &nbsp &nbspPrivacy Policy<br>
+            Developed By Sanket Prajapati &#128147</footer>
+
+
+
+        <!---------------------------------------------Script Part------------------------------------------------------------->
+        <script>
+
+            function myFunction() {
+                alert("Thanks For Contacting Us! We will contact you soon..")
+            } 
+            
+        </script>
+</body>
+
+</html>
